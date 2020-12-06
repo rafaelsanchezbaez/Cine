@@ -26,6 +26,17 @@ if (isset($lineas)) {
       }
 
     }
+    public function Edditpelicula($query){
+      global $db;
+      $consulta=$db->query($query);
+        $linea=$consulta->fetch_object();
+      if (isset($linea)) {
+        return $linea;
+
+      }else {
+      return false;
+    }
+    }
   }
 
 

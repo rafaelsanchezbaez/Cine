@@ -25,6 +25,7 @@ if (isset($cine)) {
            <th>Sinopsis</th>
            <th>Horario</th>
            <th>Clasificacion</th>
+           <th>Accion</th>
          </tr>
        </thead>
        <tbody>
@@ -35,6 +36,12 @@ if (isset($cine)) {
            <td><?php echo $c['2']; ?></td>
            <td><?php echo $c['3']; ?></td>
            <td><?php echo $c['4']; ?></td>
+           <td> <form class="" action="Updatecine.php" method="get">
+             <input type="hidden" name="Id" value="<?php echo $c[0] ?>">
+             <input type="submit" name="Enviar" value="Modificar" class="btn btn-outline-danger btn-sm">
+            </form>
+          </td>
+
 
          </tr>
          <?php endforeach; ?>
